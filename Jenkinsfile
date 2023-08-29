@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+      docker { image 'node:7-alpine' }
+  }
   environment {
       NAME = 'jingyi-admin'
       APP = 'ly1212/jingyi-admin:dev'
